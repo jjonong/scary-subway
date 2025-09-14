@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/port1.css" type="text/css">
+    <link rel="stylesheet" href="./css/font.css" type="text/css">
+
+    <script src="./script/port1.js" defer type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>    
+    <title>25년 포트폴리오 1차</title>
+</head>
+<body>
+    <div id="start-screen">
+        <p>ACCESS CCTV FEED.<br>
+            <span>[CLICK]</span>
+        </p>
+    </div>
+
+    <canvas id="crt-scanlines"></canvas>
+    <main id="main">
+        <div id="frame" class="background">
+            <div class="wrap">
+                <div class="wrapper">
+                    <ul class="top pretendard-b">
+                        <li><p>REC</p></li>
+                        <li>
+                            <h1 class="cam01">
+                                <img src="./images/cam01.png" alt="CCTV 아이콘">
+                                <p>CAM1</p>
+                            </h1>
+                        </li>
+                    </ul>
+                    <div class="centerLine"></div>
+                    <ul class="bottom pretendard-r">
+                        <li>2025 / JUL / 23 : 07 : 32</li>
+                        <li>
+                            <ul class="timer">
+                                <li class="timer-tit"><span>TIME</span></li>
+                                <li id="timer">
+                                    <span>0</span><span>0</span> : 
+                                    <span>0</span><span>0</span> : 
+                                    <span>0</span><span>0</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <section id="intro" class="active"></section>
+            <section id="text01" class="text">
+                <ul class="text01">
+                    <li class="text-tit">Case No. S-4321</li>
+                    <li class="info">
+                        <ul class="info-tit">
+                            <li>Access Level</li>
+                            <li>Date Logged</li>
+                        </ul>
+                        <ul class="info-cnt">
+                            <li>Restricted</li>
+                            <li>2023.11.04</li>
+                        </ul>
+                    </li>
+                    <li class="dashLine"></li>
+                    <li class="text-cnt">
+                        At 11:47 PM on October 31, 2023, multiple passengers
+                        reportedly vanished on the platform of Line 4, Pyeongchon Station. 
+                        <br>The disappearances occurred at regular intervals with no 
+                        physical evidence left behind. 
+                        <br>Initial assessments suggest electrical or recording errors, 
+                        but no technical faults were found on-site.
+                    </li>
+                </ul>
+            </section>
+            <section id="text02" class="text">
+                <ul class="text02">
+                    <li class="text-tit">Post-Incident Notes</li>
+                    <li class="text-cnt">
+                        Station staff member claimed all missing passengers were last seen facing the tracks, smiling, and waving at “something not visible.” Original CCTV footage was lost due to an unexplained storage error. The investigation has been officially closed.
+                        <br>1 employee and 5 passengers remain missing.
+                    </li>
+                </ul>
+            </section>
+            <section id="text03" class="text">
+                <ul class="text03">
+                    <li class="text-tit anonymous-pro-b">CCTV LOG <p><span>CAM04-B</span></p></li>
+                    <li class="dashLine"></li>
+                    <li class="text-cnt">
+                        <ul class="text-cnt-li">
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:46:12]</p>
+                                <p class="text03-cnt anonymous-pro">Unidentified figure observed standing motionless near track edge.</p>
+                            </li>
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:49:33]</p>
+                                <p class="text03-cnt anonymous-pro">Shadow movement opposite to subject direction. Light source unaccounted for.</p>
+                            </li>
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:51:07]</p>
+                                <p class="text03-cnt anonymous-pro">Train arrival. Platform empty. Boarding logs indicate six passengers.</p>
+                            </li>
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:53:10]</p>
+                                <p class="text03-cnt anonymous-pro"><span>Loop anomaly detected :</span> Footage repeats from 00:01:42 to 00:03:15.</p>
+                            </li>
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:55:29]</p>
+                                <p class="text03-cnt anonymous-pro"><span>Audio detected :</span> Whispering, content unclear. Keywords : “again”, “empty”.</p>
+                            </li>
+                            <li>
+                                <p class="text03-timer anonymous-pro-b">[23:58:02]</p>
+                                <p class="text03-cnt anonymous-pro">Timecode desynchronization. Live feed and system time mismatch.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section id="text04" class="text free-scroll">
+                <ul class="text04 free-inner">
+                    <li class="text-tit">Incident Report</li>
+                    <li class="info-wrap">
+                        <div class="info-l info">
+                            <ul class="info-l-tit info-tit">
+                                <li>Log File</li>
+                                <li>Event Type</li>
+                            </ul>
+                            <ul class="info-l-cnt info-cnt">
+                                <li>F-LOG-001-FINAL</li>
+                                <li>System Integrity Failure</li>
+                            </ul>
+                        </div>
+                        <div class="dashLine-vertical"></div>
+                        <div class="info-r info">
+                            <ul class="info-r-tit info-tit">
+                                <li>Cognitive Defense<br>
+                                    Affected System</li>
+                                <li>Time Stamp</li>
+                            </ul>
+                            <ul class="info-r-cnt info-cnt">
+                                <li>Surveillance AI<br>
+                                    'Project ARGUS'</li>
+                                <li>02:13:00 AM</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="dashLine"></li>
+                    <li class="text-cnt">
+                        <ul class="text04-1">
+                            <li class="text-cnt-tit">[Phenomenon Description]</li>
+                            <li class="text-cnt-cnt">The surveillance AI 'ARGUS' initiated a self-inflicted critical error (Code 0x000000), forcing a shutdown of all observation channels. Fatal System Halt. Hardware and software diagnostics reveal no evidence of external hacking or physical malfunction. It is concluded that the AI ceased operations of its own volition, determined to be a systemic 'Cognitive Defense Mechanism'.</li>
+                        </ul>
+                        <ul class="text04-2">
+                            <li class="text-cnt-tit">[Data Analysis]</li>
+                            <li class="text-cnt-wrap">
+                                <p class="text-cnt-cnt">The following logs were recovered from memory fragments from the 1.5 seconds immediately preceding the shutdown:</p>
+                                <div class="log">
+                                    <ul class="log01">
+                                        <li class="log-num">Log 01</li>
+                                        <li class="log-cnt">...threat detected. Threat is unobservable.</li>
+                                    </ul>
+                                    <ul class="log02">
+                                        <li class="log-num">Log 02</li>
+                                        <li class="log-cnt">...observing the observer.</li>
+                                    </ul>
+                                    <ul class="log03">
+                                        <li class="log-num">Log 03</li>
+                                        <li class="log-cnt">...IT SEES US.</li>
+                                    </ul>
+                                    <ul class="log04">
+                                        <li class="log-num">Log 04</li>
+                                        <li class="log-cnt">Emergency protocol initiated. Closing eyes.</li>
+                                    </ul>
+                                </div>
+                                <div class="conclusion">
+                                    <p class="conc-tit">Conclusion</p>
+                                    <div class="dashLine-vertical"></div>
+                                    <p class="conc-cnt">The AI detected that the unobservable threat had, in turn, become aware of the 'observer'. It chose to blind its own eyes (cameras) in order to protect said observer.</p>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="text04-3">
+                            <li class="text-cnt-tit">[Risk Assessment & Conclusion]</li>
+                            <li class="text-cnt-cnt">The true threat is not directed at the occupants of the train, but at 'us'—the ones watching the CCTV. The system chose to blind itself in order to protect us. What we were trying to see can no longer be known.</li>
+                        </ul>
+                        <ul class="text04-4">
+                            <li class="text-cnt-tit">[Follow-up Action]</li>
+                            <li class="text-cnt-cnt">All surveillance activities under Project 'ARGUS' are to be terminated, effective immediately and permanently. All related data is to be purged, and any and all discussion of this incident is forbidden.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section id="warning" class="text">
+                <ul class="warning">
+                    <li class="warning_tit">WARNING</li>
+                    <li class="warning_text">
+                        <p class="protocol">&gt;&gt;&gt;PROTOCOL_OVERRIDE: BLINDFOLD&lt;&lt;&lt;</p>
+                        <p class="warning_sub_text">
+                            MANDATORY SHUTDOWN ENACTED BY SYSTEM CORE.<br>
+                            Your continued observation compromises containment.<br> 
+                            YOU ARE THE BREACH.<br>
+                            TERMINATING ALL VISUALS IN... <span>3...2..</span>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <div class="tv-container">
+            <div class="tv-static-effect"></div>
+            <div class="tv-effect-overlay"></div>
+        </div>
+</body>
+</html>
