@@ -65,7 +65,7 @@ body{
     top: 0;
     left: 0;
     box-sizing: border-box;
-    background: url("/images/bg.jpg") no-repeat center/cover;
+    background: url("./images/bg.jpg") no-repeat center/cover;
     z-index: -1;
 }
 #main #frame::after{
