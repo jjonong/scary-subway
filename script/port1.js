@@ -1,5 +1,6 @@
 // 배경 음악 파일 경로 설정
-const bgm = new Audio('./audio/Twin Lynches - Density & Time.mp3');
+const bgm = new Audio;
+// const bgm = new Audio('./audio/Twin Lynches - Density & Time.mp3');
 bgm.loop = true; // 반복 재생 설정
 bgm.volume = 0.3; // 음량 조절 (선택 사항)
 
@@ -40,23 +41,32 @@ resize();
 window.addEventListener('resize', resize);
 
 // 세로 줄 생성
-const lines = [];
-for (let i = 0; i < canvas.width; i += 80) {
-  lines.push({
-    x: i,
-    baseX: i,             
-    offset: Math.random() * 1000,
-    speed: 0.002 + Math.random() * 0.01,
-    alpha: 0.03 + Math.random() * 0.15 // 투명도 랜덤
-  });
-}
+// const lines = [];
+// for (let i = 0; i < canvas.width; i += 80) {
+//   lines.push({
+//     x: i,
+//     baseX: i,             
+//     offset: Math.random() * 1000,
+//     speed: 0.002 + Math.random() * 0.01,
+//     alpha: 0.03 + Math.random() * 0.15 // 투명도 랜덤
+//   });
+// }
+const lines = [
+  {
+    x: window.innerWidth * 0.7,              // 시작 위치 (화면 중앙)
+    baseX: window.innerWidth * 0.7,          // 기준 위치
+    offset: Math.random() * 1000,     // 움직임 시작위치 랜덤
+    speed: 0.01, // 움직임 속도
+    alpha: 0.2   // 투명도 랜덤
+  }
+];
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   lines.forEach(line => {
     // 좌우 흔들림
-    line.x = line.baseX + Math.sin(Date.now() * line.speed + line.offset) * 80;
+    line.x = line.baseX + Math.sin(Date.now() * line.speed + line.offset) * 20;
 
     ctx.strokeStyle = `rgba(255,255,255,${line.alpha})`;
     ctx.beginPath();
@@ -253,6 +263,10 @@ tvOffTimeline
     duration: 0.4, 
     scaleY: 0.05, 
     ease: "power2.easeOut" 
+  })
+  .to(canvas,{
+    opacity: 0,
+    ease: "power2.easeIn"
   })
   // 섬광 효과
   .to(tvOverlay, { 
